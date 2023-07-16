@@ -1,0 +1,24 @@
+{
+  "name": "@derron-ward/wave",
+  "version": "0.0.0",
+  "description": "A Discord bot that plays audio tracks from YouTube.",
+  "main": "src/index.ts",
+  "scripts": {
+    "bot": "ts-node .",
+    "deploy-commands": "ts-node src/deploy-commands.ts"
+  },
+  "author": "Derron Ward <derronward.dev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.16.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "libsodium-wrappers": "^0.7.11",
+    "youtube-search": "^1.1.6",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
