@@ -11,7 +11,8 @@ const client = new WaveClient({
         GatewayIntentBits.GuildVoiceStates
     ],
     commandsPath: join(__dirname, 'commands'),
-    eventsPath: join(__dirname, 'events')
+    eventsPath: join(__dirname, 'events'),
+    ytKey: process.env.YT_KEY!
 })
 
 client.login(process.env.BOT_TOKEN)

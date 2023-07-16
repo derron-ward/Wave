@@ -1,16 +1,20 @@
 import { Client, ClientOptions, Collection, SlashCommandBuilder, CommandInteraction } from "discord.js";
+import { WavePlayer } from "./WavePlayer";
 import { join } from 'path'
 import { readdirSync } from 'fs'
 
 export interface WaveClientOptions extends ClientOptions {
     commandsPath: string,
     eventsPath: string
+    ytKey: string
 }
 
 export class WaveClient extends Client {
     commandsPath: string
     eventsPath: string
     commands: Collection<string, {data: SlashCommandBuilder, handler: (interaction: CommandInteraction) => void}>
+    ytKey: string
+    player: WavePlayer
 
     constructor(options: WaveClientOptions) {
         super(options)
@@ -21,6 +25,9 @@ export class WaveClient extends Client {
 
         this.eventsPath = options.eventsPath
         this.loadEvents()
+
+        this.ytKey = options.ytKey
+        this.player = new WavePlayer()
     }
 
     loadCommands(): void {
