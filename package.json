@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "bot": "ts-node .",
-    "deploy-commands": "ts-node src/deploy-commands.ts"
+    "deploy-commands": "ts-node src/deploy-commands.ts",
+    "deploy-commands-dev": "ts-node src/deploy-commands-dev.ts"
   },
   "author": "Derron Ward <derronward.dev@gmail.com>",
   "license": "ISC",
