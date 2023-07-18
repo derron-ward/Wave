@@ -4,7 +4,9 @@
   "description": "A Discord bot that plays audio tracks from YouTube.",
   "main": "src/index.ts",
   "scripts": {
-    "bot": "ts-node .",
+    "dev": "ts-node .",
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
     "deploy-commands": "ts-node src/deploy-commands.ts",
     "deploy-commands-dev": "ts-node src/deploy-commands-dev.ts"
   },
